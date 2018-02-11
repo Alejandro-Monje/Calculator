@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:calculator"
+    x:Class="calculator.calculatorPage"
+	
+        
+         BackgroundColor="Black">
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness"
+            iOS="0,0,0,0" />
+    </ContentPage.Padding>
+    <StackLayout
+     VerticalOptions="FillAndExpand">
+
+    <Grid
+        x:Name="NumPad"
+        VerticalOptions="FillAndExpand"
+        BackgroundColor="Black"
+        RowSpacing="1"
+        ColumnSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition
+                Height="2*" />
+            <RowDefinition
+                Height="2*" />
+            <RowDefinition
+                Height="2*" />
+            <RowDefinition
+                Height="2*" />
+                <RowDefinition
+                Height="2*" />
+                <RowDefinition
+                Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="0" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+       
+        <Label
+            x:Name="displayLabel"
+            VerticalOptions="Center"
+            HorizontalOptions="End" 
+            Text="0"
+            TextColor="White"
+                FontSize="50"
+                FontFamily="arial"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="4"
+                />
+        <Button 
+            x:Name="One"
+            StyleId="1"
+            Text="1"
+            TextColor="White"
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="Gray"
+            Clicked="OneClicked"/>
+        <Button 
+            x:Name="Two"
+            StyleId="2"
+            Text="2"
+            TextColor="White"
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="Gray" 
+            Clicked="TwoClicked"/>
+        <Button 
+            x:Name="Three"
+            StyleId="3"
+            Text="3"
+            TextColor="White"
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Gray" 
+            Clicked="ThreeClicked"/>
+        <Button 
+            x:Name="Four"
+            StyleId="4"
+            Text="4"
+            TextColor="White"
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="Gray" 
+            Clicked="FourClicked"/>
+        <Button 
+            x:Name="Five"
+            StyleId="5"
+            Text="5"
+            TextColor="White"
+            Grid.Row="3"
+            Grid.Column="2"
+            BackgroundColor="Gray" 
+            Clicked="FiveClicked"/>
+        <Button 
+            x:Name="Six"
+            StyleId="6"
+            Text="6"
+            TextColor="White"
+            Grid.Row="3"
+            Grid.Column="3"
+            BackgroundColor="Gray" 
+            Clicked="SixClicked"/>
+        <Button 
+            x:Name="Seven"
+            StyleId="7"
+            Text="7"
+            TextColor="White"
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="Gray" 
+            Clicked="SevenClicked"/>
+        <Button 
+            x:Name="Eight"
+            StyleId="8"    
+            Text="8"
+            TextColor="White"
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="Gray" 
+            Clicked="EightClicked"/>
+        <Button 
+            x:Name="Nine"
+            StyleId="9"
+            Text="9"
+            TextColor="White"
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="Gray" 
+            Clicked="NineClicked"/>
+        <Button 
+            x:Name="Plus"
+            Text="+"
+            TextColor="White"
+            Grid.Row="2"
+            Grid.Column="4"
+            BackgroundColor="Teal"
+            Clicked="PlusClicked"/>
+        <Button 
+            x:Name="Minus"
+            Text="-"
+            TextColor="White"
+            Grid.Row="3"
+            Grid.Column="4"
+            BackgroundColor="Teal" 
+            Clicked="MinusClicked"/>
+        <Button
+            x:Name="Division"
+            Text="/"
+            TextColor="White"
+            Grid.Row="4"
+            Grid.Column="4"
+            BackgroundColor="Teal" 
+            Clicked="DivisionClicked"/>
+        <Button 
+            x:Name="Zero"
+            StyleId="0"
+            Text="0"
+            TextColor="White"
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Gray" 
+             Clicked="ZeroClicked"/>
+        <Button 
+            x:Name="Mult"
+            Text="*"
+            TextColor="White"
+            Grid.Row="5"
+            Grid.Column="4"
+            BackgroundColor="Teal" 
+            Clicked="MultClicked"/>
+        <Button 
+            x:Name="ClearBtn"
+            Text="Clear"
+            TextColor="White"
+            Grid.Row="6"
+            Grid.Column="1"
+            BackgroundColor="Silver"
+            Clicked="OnClearClicked"/>
+        <Button 
+            x:Name="Equals"
+            Text="="
+            TextColor="White"
+            Grid.Row="6"
+            Grid.Column="2"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Teal" 
+            Clicked="EqualsClicked"/>
+            </Grid>
+    
+       </StackLayout>
+</ContentPage>
